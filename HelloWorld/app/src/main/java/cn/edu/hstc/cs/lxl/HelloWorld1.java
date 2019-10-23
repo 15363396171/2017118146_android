@@ -23,7 +23,7 @@ public class HelloWorld1 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(Intent.ACTION_VIEW);
-                intent.setData(Uri.parse("http://www.baidu.com"));
+                intent.setData(Uri.parse("geo:"));
                 startActivity(intent);
             }
         });
