@@ -9,11 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".HelloWorld2" android:label="This is HelloWorld2" android:launchMode="singleInstance">
+        <activity android:name=".HelloWorld2" android:label="This is HelloWorld2" android:launchMode="singleInstance"><!--//-->
         </activity>
         <activity
             android:name=".HelloWorld1"
             android:label="This is HelloWorld1">
+            <intent-filter>
+                <action android:name="cn.edu.hstc.cs.lxl.HelloWorld.ACTION_START" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
         </activity>
         <activity android:name=".MainActivity">
             <intent-filter>

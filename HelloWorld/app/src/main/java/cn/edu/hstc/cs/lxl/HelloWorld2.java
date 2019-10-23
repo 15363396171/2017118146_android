@@ -14,6 +14,7 @@ public class HelloWorld2 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Log.d("HelloWorld2","Task id is "+getTaskId());//
         setContentView(R.layout.helloworld2_layout);
         Button button2=(Button) findViewById(R.id.button_2);
         button2.setOnClickListener(new View.OnClickListener(){

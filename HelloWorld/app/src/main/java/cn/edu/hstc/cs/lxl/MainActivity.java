@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Log.d("MainActivity","Task id is "+getTaskId());//
         setContentView(R.layout.activity_main);
         Button buttonM=(Button) findViewById(R.id.button_M);
         buttonM.setOnClickListener(new View.OnClickListener(){

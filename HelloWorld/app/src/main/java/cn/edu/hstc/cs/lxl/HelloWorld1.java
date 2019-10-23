@@ -3,6 +3,7 @@ package cn.edu.hstc.cs.lxl;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -15,12 +16,14 @@ public class HelloWorld1 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Log.d("HelloWorld1","Task id is "+getTaskId());//
         setContentView(R.layout.helloworld1_layout);
         Button button1=(Button) findViewById(R.id.button_1);
         button1.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(HelloWorld1.this,HelloWorld1.class);
+                Intent intent=new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse("http://www.baidu.com"));
                 startActivity(intent);
             }
         });
